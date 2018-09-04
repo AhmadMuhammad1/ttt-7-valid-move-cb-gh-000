@@ -1,16 +1,16 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
   position_taken?(board, index)
-  if index >= 1 && index <= 9
+  if index >= 0 && index <= 8
     true
   end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
-  if board[index - 1] == " " || board[index - 1] == "" || board[index - 1] == nil
+  if board[index] == " " || board[index] == "" || board[index] == nil
     true
-  elsif board[index - 1] == "X" || board[index - 1] == "O"
+  elsif board[index] == "X" || board[index] == "O"
     false
   end
 end
